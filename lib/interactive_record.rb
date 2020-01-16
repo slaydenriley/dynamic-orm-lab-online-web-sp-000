@@ -55,7 +55,7 @@ class InteractiveRecord
 
   def self.find_by(attr_hash)
     binding.pry
-    value = attr_hash.value.first
+    value = attr_hash.values.first
     sql = "SELECT * FROM #{self.table_name} WHERE attr = ?"
   end
 
